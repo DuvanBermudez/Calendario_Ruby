@@ -4,12 +4,14 @@
     <%= date %>
   <% end %>
 <% else %>
-<img src="C:\Users\elean\Desktop\RubyBox\Calendario_Ruby-master\app\assets\images\prueba.jpg" alt="prueba">
+<%= image_tag "prueba.jpg" , class: "imgfull" %>
     <section class="full-box section">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
+                    <br>
                     <h2 class="text-center text-titles">¡Bienvenido!</h2>
+                    <br>
                     <p class="lead text-justify">
                         ¡Hola!¿Tiene problemas para coordinar el desorden creativo de un equipo o para organizar el suyo? ¡Sabemos lo difícil que es! Nuestra solución es muy sencilla: programe, comparta y sincronice. El calendario de Calendario 24/7 le permite hacerlo todo en tan solo unos clics.
                     </p>
@@ -21,6 +23,7 @@
                     <i class="fa fa-briefcase icon-services" aria-hidden="true"></i>
                     <h3 class="text-center text-titles">Nuestras Funciones</h3>
                     <ul class="list-unstyled full-box list-services">
+                        <br>
                         <li>
                             <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
                             • Calendarios grupales
@@ -49,11 +52,12 @@
                 </div>
                 <div class="col-xs-12 col-md-4" style="padding: 17px 0;">
                     <i class="fa fa-heart icon-services" aria-hidden="true"></i>
-                    <h3 class="text-center text-titles">Imagenes "Muestra"</h3>
+                    <h3 class="text-center text-titles">Imagen "Muestra"</h3>
+                    <br>
                     <ul class="list-unstyled full-box list-services">
                         <li>
                             <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
-                            <img src="assets/images/prueba2.jpg" alt="prueba2">
+                            <%= image_tag "prueba2.jpg" , class: "imgpe"%>
                         </li>
                         </ul>
                 </div>
@@ -72,6 +76,7 @@
         </div>  
     </section>
     <section class="full-box section section-a">
+        <br>
         <h2 class="text-center text-titles">Beneficios de Calendario 24/7</h2>
         <br><br>
         <div class="container">
@@ -131,6 +136,7 @@
     </section>
     <br><br>
     <section class="full-box section" style="background-color: #005A4A;">
+        <br>
         <h2 class="text-condensed text-center" style="color: #F5D817;">Todo lo que necesitas para realizar tareas, ahora en un solo lugar.</h2>
         <br>
         <div class="container">
@@ -199,4 +205,5 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
 <% end %>
