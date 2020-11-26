@@ -1,8 +1,211 @@
 <% if user_signed_in? %>
-  <h1>Bienvenido <% current_user.name %></h1>
-  <%= month_calendar(attribute: :start_date, end_attribute: :end_date) do |date| %>
+  <h1>Bienvenido <% current_user.email %></h1>
+  <%= month_calendar(events: @meetings) do |date, meetings| %>
     <%= date %>
+
+    <% meetings.each do |meeting| %>
+      <div class="border1">
+        <%= meeting.name %>
+      </div>
+    <% end %>
   <% end %>
 <% else %>
+  <section class="full-box section">
+    <div class="container">
+      <%= image_tag "prueba.jpg" , class: "imgfull" %>
+      <div class="row">
+        <div class="col-xs-12">
+          <br>
+          <h2 class="text-center text-titles">¡Bienvenido!</h2>
+          <br>
+          <p class="lead text-justify">
+            ¡Hola!¿Tiene problemas para coordinar el desorden creativo de un equipo o para organizar el suyo? ¡Sabemos lo difícil que es! Nuestra solución es muy sencilla: programe, comparta y sincronice. El calendario de Calendario 24/7 le permite hacerlo todo en tan solo unos clics.
+          </p>
+        </div>
+      </div>
+      <br><br>
+      <div class="row"  >
+        <div class="col-xs-12 col-md-6" style="padding: 17px 0;">
+          <i class="fa fa-briefcase icon-services" aria-hidden="true"></i>
+          <h3 class="text-center text-titles">Nuestras Funciones</h3>
+          <ul class="list-unstyled full-box list-services">
+            <br>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Calendarios grupales
+            </li>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Calendarios favoritos
+            </li>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Reuniones y sesiones informativas
+            </li>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Integración con CRM
+            </li>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Cuadro de ausencia
+            </li>
+            <li>
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;
+              • Programador de eventos
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6" style="padding: 17px 0;">
+          <i class="fa fa-heart icon-services" aria-hidden="true"></i>
+          <h3 class="text-center text-titles">Imagenes del prototipo</h3>
+          <br>
+          <%= image_tag "prueba2.jpg" , class: "imgpe"%>
+        </div>
+    </div>
+  </section>
+  <section class="full-box cover section-lema">
+    <div class="full-box section-lema-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="text-condensed text-center">
+              «Necesita una herramienta competente que lo ayude a comunicarse con sus colegas, generar una lluvia de ideas para encontrar soluciones y gestionar proyectos. Todas estas tareas se pueden realizar utilizando un servicio llamado Calendario 24/7.»
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="full-box section section-a" style="background-color: #28a745;color: white" >
+    <br>
+    <h2 class="text-center text-titles">Beneficios de Calendario 24/7</h2>
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-pull-4 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Mantenga a todos los miembros del departamento sintonizados
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-pull-4 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Nunca se pierda otra reunión ni se olvide de hacer una llamada de seguimiento
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Vea quien está planificando ausentarse y por cuanto tiempo
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Comparta calendarios para coordinar entre los equipos y plataformas
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Programe eventos recurrentes y fije recordatorios
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="section-a-container">
+
+            <p>
+              • Planifique, organice y registre reuniones, sesiones informativas y eventos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </section>
+  <section class="full-box section" style="background-color: #28a745;">
+    <br>
+    <h2 class="text-condensed text-center" style="color: #FFFFFF;">Todo lo que necesitas para realizar tareas, ahora en un solo lugar.</h2>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <p style="color:#fff;">
+            • Las herramientas que más le gustan, perfectamente conectadas <br>
+            Calendario 24/7, un lugar de trabajo integrado y fácil de usar, le permite dedicar menos tiempo a administrar sus tareas y más tiempo a hacerlas.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p style="color:#fff;">
+            • Sugerencias inteligentes para ayudarlo a establecer prioridades<br>
+            Haga lo importante y deje que Calendario 24/7 se encargue del resto con la mejor tecnología de IA y de búsqueda en su clase para trabajar de manera más inteligente.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p style="color:#fff;">
+            • Soluciones flexibles para todas las empresas <br>
+            Trabaje esté donde esté y con cualquier dispositivo, incluso sin conexión, con herramientas que lo ayudarán a integrar, personalizar y ampliar Google Workspace para satisfacer las necesidades particulares de su equipo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="full-box footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="list-unstyled text-center social-icons">
+            <li>
+              <a href="#!">
+                <i class="fa fa-facebook" aria-hidden="true" style="background-color: #2B3990;"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa fa-twitter" aria-hidden="true" style="background-color: #26A9E0;"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa fa-youtube" aria-hidden="true" style="background-color: #EC1B23"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa fa-instagram" aria-hidden="true" style="background-color: #32689C"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!" aria-hidden="true" style="background-color: #BE1D2C"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12">
+          <p class="text-center text-condensed">
+            Copyright &copy; 2020
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 
 <% end %>
